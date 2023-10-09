@@ -4,6 +4,6 @@ export const errorHandler = (statusCode, messege) => {
 
   err.statusCode = statusCode;
   err.messege = messege;
-  console.log(` cons ${err}`);
+  // console.log(` cons ${err}`);
   return err;
 };
