@@ -28,7 +28,7 @@ app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);
 
 app.use((err, req, res, next) => {
-  console.log(` error in middleware${err.statusCode} ${err.message}`);
+  console.log(` error in middleware ${err.statusCode} message this : ${err.message}`);
   const statusCode = err.statusCode || 500;
   const messege = err.message || "Internal Server Error";
 
