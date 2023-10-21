@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import userRouter from "./routes/user.route.js";
 import authRouter from "./routes/auth.route.js"; //js extension is must
 import dotenv from "dotenv"
+import cookieParser from "cookie-parser";
 dotenv.config();
 
 async function main() {
@@ -23,6 +24,7 @@ app.listen(3000, () => {
 });
 
 app.use(express.json());
+app.use(cookieParser())
 
 app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);
